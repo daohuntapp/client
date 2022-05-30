@@ -13,7 +13,7 @@ const Navbar = () => {
 
   const connectWallet = async () => {
     authenticate({
-      signingMessage: "Welcome to sociallego",
+      signingMessage: "Welcome to DAOHUNT",
       chainId: 80001,
     });
     setWalletAddress(user.get("ethAddress"));
