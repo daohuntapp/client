@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import { toolsData } from "../data/toolsData";
-import Banner from "./Banner";
+import BannerDaoTool from "./BannerDaoTool";
 
 console.log(toolsData);
 
@@ -13,7 +13,7 @@ const ToolsList = () => {
 
   return (
     <div className="main">
-      <Banner />
+      <BannerDaoTool />
 
       <section className="itemsSection">
         <div className="containerNew">
