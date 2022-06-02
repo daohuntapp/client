@@ -3,9 +3,11 @@ import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { daoData } from "../data/daoData";
 import { utils } from "@snapshot-labs/snapshot.js";
+import logo from "../images/logo.png";
 
 import bg from "../images/bg.png";
 import axios from "axios";
+import Footer from "./Footer";
 
 const { subgraphRequest } = utils;
 const { daoDataDetail } = daoData;
@@ -15,7 +17,7 @@ const DaoDetail = () => {
   const [thisData, setThisData] = useState(null);
 
   const [proposals, setProposals] = useState([]);
-  console.log("result", result);
+  // console.log("result", result);
 
   let intermediateresult = 0;
   let mean = 0;
@@ -31,7 +33,12 @@ const DaoDetail = () => {
     setThisData(daoDataCurrent);
     const getProposals = async (daoDataCurrentfn) => {
       let proposals;
-      const nameDAO = daoDataCurrentfn.snapshotID;
+      const newID = daoDataCurrent.name;
+      //alert(newID);
+      const snapshotID = newID.split(" ")[0].toLowerCase();
+      // alert(newID2);
+      //const nameDAO = daoDataCurrentfn.snapshotID;
+      const nameDAO = snapshotID + ".eth";
       console.log(nameDAO, "nameDAO");
       if (nameDAO) {
         proposals = await subgraphRequest("https://hub.snapshot.org/graphql", {
@@ -76,22 +83,26 @@ const DaoDetail = () => {
             symbol,
           {
             headers: {
-              "X-CMC_PRO_API_KEY": "6dd784a5-631c-4fad-87a1-82754ab0b8e3",
+              "X-CMC_PRO_API_KEY": "c72fcd2d-e580-47f8-b7dc-ceceeb4504fd",
+              // "X-CMC_PRO_API_KEY": "6dd784a5-631c-4fad-87a1-82754ab0b8e3",
               "Access-Control-Allow-Origin": "*",
             },
           }
         );
+        console.log("response data we are looking for ", response);
       } catch (ex) {
+        console.log("response data we are looking for ", response);
         response = null;
         // error
         console.log(ex);
         reject(ex);
       }
+
       if (response) {
         // success
         const json = response.data;
         const datajson = json.data[symbol];
-        console.log(datajson);
+        console.log("response data we are looking for ", datajson);
         resolve(json);
 
         const jsonfinal = {
@@ -137,11 +148,14 @@ const DaoDetail = () => {
         scaledresult = (intermediateresult / 60) * 100;
 
         setresult(scaledresult);
+      } else {
+        //alert("bolo");
       }
     });
   }
 
   function DAODetails() {
+    console.log("this data", thisData);
     return (
       <div className="main">
         <section className="detailPageSec">
@@ -158,6 +172,7 @@ const DaoDetail = () => {
                     <div className="title-name-details">
                       <div>
                         <h2>{thisData.name}</h2>
+
                         {/* <h2>Curve Finance</h2> */}
                         <h4 className="tokenh4">${thisData.daoToken}</h4>
                       </div>
@@ -567,19 +582,27 @@ const DaoDetail = () => {
             </div>
           </div>
         </section>
+        <Footer />
         {/* footer  start*/}
-        <div className="footer">
+        {/* <div className="footer">
           <div className="container">
             <div className="row">
               <div className="col-md-6">
-                <h2 className="left-content">LOGO</h2>
+                <h2 className="left-content">
+                  <img
+                    className="blueLogo"
+                    style={{ width: "200px" }}
+                    src={logo}
+                    alt=""
+                  />
+                </h2>
               </div>
               <div className="col-md-6">
                 <p className="right-content">© DAO Hunt, 2022</p>
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* footer  end*/}
       </div>
     );

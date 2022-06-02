@@ -71,7 +71,10 @@ const TopDaos = () => {
                       />
 
                       <div className="alignLeft">
-                        <h4>{obj.name}</h4>
+                        <h4 to={`${obj._id}`}>
+                          <NavLink to={`${obj._id}`}> {obj.name}</NavLink>
+                        </h4>
+
                         <p>{obj.category.toString().replace(/,/g, " | ")}</p>
                       </div>
                     </div>

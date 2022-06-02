@@ -4,6 +4,7 @@ import { daoData } from "../data/daoData";
 import Filterizr from "filterizr";
 import Buttons from "../components/Buttons";
 import TopDaos from "./TopDaos";
+import Footer from "./Footer";
 
 // import FilterizrPacker from "filterizr";
 
@@ -63,16 +64,19 @@ const DaoList = () => {
               </select>
 
               <select name="" id="">
-              <option>Categories</option>
+                <option>Categories</option>
               </select>
               <div className="searchbar">
-              <input
-                type="text"
-                name="search"
-                placeholder="Search..."
-                data-search
-              />
-              <i className="fa-solid fa-magnifying-glass"></i>
+                <input
+                  type="text"
+                  name="search"
+                  placeholder="Search..."
+                  data-search
+                />
+                <i
+                  style={{ "margin-right": "20px" }}
+                  className="fa-solid fa-magnifying-glass"
+                ></i>
               </div>
             </div>
             {item.map((obj, i) => {
@@ -105,6 +109,7 @@ const DaoList = () => {
           </div>
         </div>
       </section>
+      <Footer></Footer>
     </div>
   );
 };
