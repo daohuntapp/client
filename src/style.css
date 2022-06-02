@@ -1,14 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
   box-sizing: border-box !important;
-  font-family: 'Poppins', sans-serif;
-  ;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-  background: #1A1A1A;
+  background: #1a1a1a;
 }
 
 img,
@@ -29,7 +28,7 @@ h6 {
   color: #000;
 }
 h2 {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 50px;
@@ -90,14 +89,14 @@ ellipse {
   filter: blur(300px);
   transform: rotate(-180deg);
 }
-.ellipse p{
-font-style: normal;
-font-weight: 500;
-font-size: 24px;
-line-height: 36px;
+.ellipse p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
 }
-.ellipse h2{
-line-height: 70px;
+.ellipse h2 {
+  line-height: 70px;
 }
 button {
   cursor: pointer;
@@ -127,7 +126,7 @@ header {
   height: 100px;
   left: 0px;
   top: 0px;
-  background: #FFFFFF;
+  background: #ffffff;
   box-shadow: 0px 12px 24px -5px rgb(0 0 0 / 10%);
 }
 nav {
@@ -258,7 +257,7 @@ nav .submitdaobutton {
 }
 
 .home-header {
-  background-image: url('./images/bg1.png');
+  background-image: url("./images/bg1.png");
   background-repeat: no-repeat;
   background-position: top;
 }
@@ -313,14 +312,14 @@ nav .submitdaobutton {
   min-width: 310px;
   max-width: 310px;
   padding: 20px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(202, 205, 213, 0.5);
   box-shadow: 0px 12px 19px -7px rgba(0, 0, 0, 0.28);
   border-radius: 12px;
 }
 
 .mainsectionTopDao {
-  background-color: #fff;
+  /* background-color: #fff; */
   min-width: 430px;
   height: 96px;
   /* padding: 20px; */
@@ -355,10 +354,10 @@ nav .submitdaobutton {
 
 .main section.itemsSection .daoItem p {
   margin-bottom: 0;
-    font-size: 16px;
-    color: #000;
-    line-height: 160%;
-    font-weight: 500;
+  font-size: 16px;
+  color: #000;
+  line-height: 160%;
+  font-weight: 500;
 }
 
 .main section.itemsSectionTopdaos {
@@ -380,17 +379,18 @@ nav .submitdaobutton {
 }
 
 .topdaos-section {
-  min-width: 90%;
+  min-width: 100%;
   height: 96px;
   padding: 20px;
   display: flex;
   gap: 10px;
   align-items: center;
-  background: rgba(238, 239, 242, 0.35);
+  background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0px 4px 5px -1px rgb(0 0 0 / 8%);
   backdrop-filter: blur(374px);
   border-radius: 16px;
+  color: #000;
 }
 
 .main section.itemsSection .topdaos {
@@ -444,11 +444,11 @@ nav .submitdaobutton {
   font-size: 24px;
   font-weight: 500;
   line-height: 150%;
-  color: #1BA94C;
+  color: #1ba94c;
 }
 
 .main section.itemsSection .items a {
-  background: linear-gradient(123.76deg, #1BA94C 10.61%, #00625C 88.83%);
+  background: linear-gradient(123.76deg, #1ba94c 10.61%, #00625c 88.83%);
   border-radius: 12px;
   width: 100%;
   border: none;
@@ -469,7 +469,7 @@ nav .submitdaobutton {
 }
 
 .detailPageSec {
-  background-image: url('./images/bg2.png');
+  background-image: url("./images/bg2.png");
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -480,7 +480,7 @@ nav .submitdaobutton {
   opacity: 30%;
   /* background-color: linear-gradient(270deg, #08874c 0%, #1ba62e 100%); */
 }
-.detailArea img{
+.detailArea img {
   width: 250px;
   height: 250px;
   border-radius: 120px;
@@ -531,13 +531,13 @@ nav .submitdaobutton {
 .title-name-details ul li {
   list-style: none;
 }
-.title-name-details ul li a{
-    color: #1BA94C !important;
-    border-radius: 31px;
-    background: #FFFFFF;
-    border: 1px solid #1BA94C;
-    padding: 4px 9px;
-    margin-right: 6px;
+.title-name-details ul li a {
+  color: #1ba94c !important;
+  border-radius: 31px;
+  background: #ffffff;
+  border: 1px solid #1ba94c;
+  padding: 4px 9px;
+  margin-right: 6px;
 }
 
 .main .detailPageSec .detailArea .left p {
@@ -565,11 +565,11 @@ nav .submitdaobutton {
   align-items: center;
   justify-content: center;
   background: rgba(238, 239, 242, 0.35);
- border: 1px solid rgba(0, 0, 0, 0.1);
- box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.08);
- backdrop-filter: blur(374px);
- border-radius: 16px;
- margin-left: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(374px);
+  border-radius: 16px;
+  margin-left: 15px;
 }
 
 .main .detailPageSec .detailArea .left .tabs {
@@ -635,52 +635,49 @@ nav .submitdaobutton {
   align-items: flex-end;
   gap: 20px;
 }
-.getdatabtn
-{
+.getdatabtn {
   margin-top: 40px;
   display: flex;
   gap: 30px;
 }
- .sideBtns button
-{
+.sideBtns button {
   width: 160px;
-background: #FFFFFF;
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-border-radius: 12px !important;
-color: #1BA94C;
-border: 1px solid #1BA94C;
-font-size: 16px;
-padding: 0;
+  background: #ffffff;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 12px !important;
+  color: #1ba94c;
+  border: 1px solid #1ba94c;
+  font-size: 16px;
+  padding: 0;
 }
-.getdatabtn .sideBtns i
-{
+.getdatabtn .sideBtns i {
   padding: 10px 17px;
-  border: 1px solid #1BA94C;
+  border: 1px solid #1ba94c;
   border-radius: 20px;
 }
-.sideBtngreen a:hover
-{
- color: white;
+.sideBtngreen a:hover {
+  color: white;
 }
-.sideBtngreen a
-{
+.sideBtngreen a {
   border-left: 0;
   width: 160px;
   margin-right: 0;
-font-size: 16px;
-font-style: normal;
-font-weight: 500;
-line-height: 160%;
-background: linear-gradient(123.76deg, #1BA94C 10.61%, #00625C 88.83%);
-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
-border-radius: 12px;
-color:#FFFFFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 160%;
+  background: linear-gradient(123.76deg, #1ba94c 10.61%, #00625c 88.83%);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  color: #ffffff;
 }
-.sideBtngreen button a
-{
-  
-background: linear-gradient(123.76deg, #1BA94C 10.61%, #00625C 88.83%) !important;
-color:#FFFFFF !important;
+.sideBtngreen button a {
+  background: linear-gradient(
+    123.76deg,
+    #1ba94c 10.61%,
+    #00625c 88.83%
+  ) !important;
+  color: #ffffff !important;
 }
 /* .getdatabtn .sideBtns .active
 {
@@ -810,7 +807,7 @@ color:#FFFFFF;
 }
 
 .tabSection .nav-tabs .nav-link.active {
-  color: #1BA94C;
+  color: #1ba94c;
   /* border-bottom: 2px solid #fff !important; */
   border: none;
   background: none;
@@ -827,65 +824,78 @@ color:#FFFFFF;
   border: none;
   background: none;
 }
-.tab-pane span{
+.tab-pane span {
   font-size: 26px;
   font-weight: 400;
-  color: #1BA94C;
+  color: #1ba94c;
 }
-.tabs-content
-{
-  color: #000000 !important; 
+
+.tabs-content {
+  color: #000000 !important;
   font-weight: 400 !important;
   font-size: 24px !important;
   line-height: 42px !important;
 }
-.bg-green{
-background-color: #1BA94C;
+.bg-green {
+  background-color: #1ba94c;
 }
-.bg-red
-{
-  background-color: #FF3236;
+.bg-red {
+  background-color: #ff3236;
 }
-.tabs-content .footerText
-{
+.tabs-content .footerText {
   font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 42px;
-    color: #1BA94C;
-    margin-bottom: 0;
-    margin-top: 35px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 42px;
+  color: #1ba94c;
+  margin-bottom: 0;
+  margin-top: 35px;
 }
-.tabs-content .bodytext
-{
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 400;
-font-size: 24px;
-line-height: 42px;
-color: #000000;
-padding: 10px 0px 0px 0px;
+
+.tabs-content .bodytext {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 42px;
+  color: #000000;
+  padding: 10px 0px 0px 0px;
 }
-.tabSection .activetab{
+.tabSection .activetab {
   margin-left: 16px;
-    font-size: 16px;
-    align-items: center;
-    color: white;
-    padding: 2px 24px;
-    width: 97px;
-    height: 24px;
-    /* text-align: center; */
-    vertical-align: center;
-    border-radius: 20px;
+  font-size: 16px;
+  align-items: center;
+  color: white;
+  padding: 2px 24px;
+  width: 97px;
+  height: 24px;
+  /* text-align: center; */
+  vertical-align: center;
+  border-radius: 20px;
 }
-.tabSection .tab-content>.active {
+.tabSection .tab-content > .active {
+  /* color: #08874c;
+  margin-top: 45px;
+  border-radius: 17px;
+  padding: 35px 20px 25px 22px;
+  font-size: 24px;
+  font-weight: 500;
+  background: #ffffff;
+  border: 1px solid rgba(202, 205, 213, 0.5);
+  box-shadow: 0px 12px 19px -7px rgb(0 0 0 / 28%);
+  border-radius: 12px;
+  width: 100%; */
+  padding: 35px 20px 25px 22px;
+}
+
+.tab-content2 {
   color: #08874c;
   margin-top: 45px;
   border-radius: 17px;
   padding: 35px 20px 25px 22px;
   font-size: 24px;
   font-weight: 500;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid rgba(202, 205, 213, 0.5);
   box-shadow: 0px 12px 19px -7px rgb(0 0 0 / 28%);
   border-radius: 12px;
@@ -910,52 +920,49 @@ padding: 10px 0px 0px 0px;
 .hide-data {
   display: none;
 }
-.itemOuter .listCategoris  select{
+.itemOuter .listCategoris select {
   padding: 3px 9px;
   width: 228px;
-  background: #F5F6F7;
-  border: 1px solid #E2E4E8;
+  background: #f5f6f7;
+  border: 1px solid #e2e4e8;
   border-radius: 3px;
 }
-.itemOuter .listCategoris input{
+.itemOuter .listCategoris input {
   padding: 3px 9px;
-  background: #FFFFFF;
-  border: 1px solid #E2E4E8;
+  background: #ffffff;
+  border: 1px solid #e2e4e8;
   border-radius: 3px;
   width: 830px;
 }
 .itemOuter .listCategoris .searchbar {
   position: relative;
 }
-.itemOuter .listCategoris .searchbar i{
+.itemOuter .listCategoris .searchbar i {
   position: absolute;
   right: -12px;
   top: 7px;
 }
-.itemOuter .listCategoris
-{
+.itemOuter .listCategoris {
   display: flex;
   gap: 20px;
 }
-.footer .right-content
-{
+.footer .right-content {
   font-weight: 500;
   font-size: 27px;
   line-height: 160%;
   color: #333333;
   float: right;
 }
-.footer .left-content
-{
+.footer .left-content {
   font-weight: 500;
   font-size: 27px;
   line-height: 160%;
   color: #333333;
   float: left;
 }
-.footer{
-padding: 16px 10px 10px 10px;
-background: #CACDD5;
+.footer {
+  padding: 16px 10px 10px 10px;
+  background: #cacdd5;
 }
 /* .show-data:hover {
     display: block;

@@ -49,25 +49,32 @@ const TopDaos = () => {
                 <div key={i} className="col-md-3 mainsectionTopDao">
                   {/* <h5 className="rank">{i + 1}</h5> */}
                   <div className="topdaos">
-                    <h5 className="rank" style={{ float: "right" }}>
-                      ({i + 1})
-                    </h5>
-                    <div className="topdaos-section">
-                    <img
-                      src={obj.image}
-                      alt={obj.name}
+                    <h1
+                      className="rank"
                       style={{
-                        height: "65px",
-                        width: "65px",
-                        objectFit: "contain",
+                        float: "right",
+                        fontSize: "20px",
+                        fontWeight: "600",
                       }}
-                    />
+                    >
+                      {i + 1}
+                    </h1>
+                    <div className="topdaos-section">
+                      <img
+                        src={obj.image}
+                        alt={obj.name}
+                        style={{
+                          height: "65px",
+                          width: "65px",
+                          objectFit: "contain",
+                        }}
+                      />
 
-                    <div className="alignLeft">
-                      <h4>{obj.name}</h4>
-                      <p>{obj.category.toString().replace(/,/g, " | ")}</p>
-                    </div>
+                      <div className="alignLeft">
+                        <h4>{obj.name}</h4>
+                        <p>{obj.category.toString().replace(/,/g, " | ")}</p>
                       </div>
+                    </div>
                   </div>
                 </div>
               );
