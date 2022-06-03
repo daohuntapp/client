@@ -1,10 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import { daoData } from "../data/daoData";
-import Filterizr from "filterizr";
-import Buttons from "../components/Buttons";
 import TopDaos from "./TopDaos";
-import Footer from "./Footer";
 
 // import FilterizrPacker from "filterizr";
 
@@ -109,7 +106,6 @@ const DaoList = () => {
           </div>
         </div>
       </section>
-      <Footer></Footer>
     </div>
   );
 };

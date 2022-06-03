@@ -1,18 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.a8510258.css",
-    "main.js": "/static/js/main.cf279c39.js",
+    "main.css": "/static/css/main.c588cd4c.css",
+    "main.js": "/static/js/main.e75ffeec.js",
     "static/media/bg1.png": "/static/media/bg1.23abfbafff1a4a984089.png",
     "static/media/bg2.png": "/static/media/bg2.8ec26e586700a96a9f14.png",
     "static/media/dao-banner.png": "/static/media/dao-banner.dd388a3efac6ea8f3088.png",
     "static/media/logo.png": "/static/media/logo.d52b81910c0ff8a7d5ba.png",
-    "static/media/bg.png": "/static/media/bg.0260e21da625f3d2355c.png",
     "index.html": "/index.html",
-    "main.a8510258.css.map": "/static/css/main.a8510258.css.map",
-    "main.cf279c39.js.map": "/static/js/main.cf279c39.js.map"
+    "main.c588cd4c.css.map": "/static/css/main.c588cd4c.css.map",
+    "main.e75ffeec.js.map": "/static/js/main.e75ffeec.js.map"
   },
   "entrypoints": [
-    "static/css/main.a8510258.css",
-    "static/js/main.cf279c39.js"
+    "static/css/main.c588cd4c.css",
+    "static/js/main.e75ffeec.js"
   ]
 }

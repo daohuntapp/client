@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #1a1a1a;
+  background: #fff;
 }
 
 img,
@@ -541,7 +541,7 @@ nav .submitdaobutton {
 }
 
 .main .detailPageSec .detailArea .left p {
-  font-size: 24px;
+  /* font-size: 24px; */
   font-weight: 400;
   color: #000;
   line-height: 36px;
@@ -840,7 +840,7 @@ color:#FFFFFF;
   background-color: #1ba94c;
 }
 .bg-red {
-  background-color: #ff3236;
+  background-color: #ff3236 !important;
 }
 .tabs-content .footerText {
   font-style: normal;
@@ -963,6 +963,26 @@ color:#FFFFFF;
 .footer {
   padding: 16px 10px 10px 10px;
   background: #cacdd5;
+  margin-bottom: 0;
+  padding: 14px 10px 10px 9px;
+  background: #cacdd5;
+  /* margin-bottom: 0; */
+  /* position: fixed; */
+  width: 100%;
+  bottom: 0;
+}
+.getDataDiv {
+  position: absolute;
+  background-color: #08874c;
+  padding: 20px;
+  width: 350px;
+  display: block !important;
+  border-radius: 12px;
+}
+.getDataDiv p {
+  font-size: 14px;
+  color: white !important;
+  line-height: 20px !important;
 }
 /* .show-data:hover {
     display: block;

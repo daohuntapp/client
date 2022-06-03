@@ -5,14 +5,12 @@ import ToolsList from "./ToolsList";
 
 const Home = () => {
   return (
-    <>
-      <div className="main">
-       <div className="home-header">
-       <Banner />
+    <div className="main">
+      <div className="home-header">
+        <Banner />
         <DaoList />
-       </div>
       </div>
-    </>
+    </div>
   );
 };
 

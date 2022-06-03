@@ -3,11 +3,8 @@ import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { daoData } from "../data/daoData";
 import { utils } from "@snapshot-labs/snapshot.js";
-import logo from "../images/logo.png";
 
-import bg from "../images/bg.png";
 import axios from "axios";
-import Footer from "./Footer";
 
 const { subgraphRequest } = utils;
 const { daoDataDetail } = daoData;
@@ -89,9 +86,8 @@ const DaoDetail = () => {
             },
           }
         );
-        console.log("response data we are looking for ", response);
       } catch (ex) {
-        console.log("response data we are looking for ", response);
+        // console.log("response data we are looking for ", response);
         response = null;
         // error
         console.log(ex);
@@ -178,7 +174,10 @@ const DaoDetail = () => {
                       </div>
                       <ul>
                         <li>
-                          <a>
+                          <a
+                            href={thisData.website.replace("https://", "")}
+                            target="_blank"
+                          >
                             <i
                               className="fa-solid fa-globe"
                               aria-hidden="true"
@@ -186,32 +185,42 @@ const DaoDetail = () => {
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={thisData.discord} target="_BLANK">
                             {/* <i class="fa-solid fa-m"></i> */}
                             <i
-                              className="fa-brands fa-m"
+                              className="fa-brands fa-discord"
                               aria-hidden="true"
                             ></i>
                           </a>
                         </li>
                         <li>
-                          <a>
+                          <a href={thisData.twitter} target="_blank">
                             <i
                               className="fa-brands fa-twitter"
                               aria-hidden="true"
                             ></i>
                           </a>
                         </li>
-                        <li>
+                        {/* <li>
                           <a>
                             <i
                               className="fa-brands fa-telegram"
                               aria-hidden="true"
                             ></i>
                           </a>
-                        </li>
+                        </li> */}
                         <li>
-                          <a>
+                          <a
+                            href="https://twitter.com/share?ref_src=twsrc%5Etfw"
+                            class="twitter-share-button"
+                            data-show-count="false"
+                            target="_blank"
+                          >
+                            <script
+                              async
+                              src="https://platform.twitter.com/widgets.js"
+                              charset="utf-8"
+                            ></script>
                             <i
                               className="fa-solid fa-share-alt"
                               aria-hidden="true"
@@ -241,7 +250,7 @@ const DaoDetail = () => {
                         </div>
                       </div>
                       <div className="getdatabtn">
-                        <div className="sideBtns" style={{ color: "white" }}>
+                        <div className="sideBtns" style={{ color: "green" }}>
                           {finalData.length > 0 ? (
                             <>
                               <i
@@ -262,19 +271,10 @@ const DaoDetail = () => {
                                 className="hide-data"
                                 style={{
                                   position: "relative",
-                                  backgroundColor: "aqua",
+                                  backgroundColor: "black",
                                 }}
                               >
-                                <div
-                                  style={{
-                                    position: "absolute",
-                                    backgroundColor: "white",
-                                    color: "black",
-                                    padding: "10px",
-                                    width: "350px",
-                                    borderRadius: "5px",
-                                  }}
-                                >
+                                <div className="getDataDiv">
                                   <p>symbol: {finalData[0].symbol}</p>
                                   <p>
                                     circulating_supply:{" "}
@@ -316,7 +316,7 @@ const DaoDetail = () => {
                             </>
                           ) : (
                             <button onClick={() => getdata(thisData.daoToken)}>
-                              {result ? result : "Get Data"}
+                              {result ? result : "DAOHunt Score"}
                             </button>
                           )}
                         </div>
@@ -389,7 +389,7 @@ const DaoDetail = () => {
                       <i
                         className="fa-brands fa-twitter"
                         style={{ color: "#55ACEE" }}
-                      ></i>{" "}
+                      ></i>
                       Twitter
                     </a>
                     <a
@@ -488,8 +488,19 @@ const DaoDetail = () => {
                             <span>
                               {" "}
                               {proposal.title.slice(0, 80)}
-                              <span className="activetab bg-green">
-                                {proposal.state}
+                              {/* {proposal.state =  "closed" ? "activetab bg-red" : "activetab bg-green"} */}
+                              <span
+                                className={
+                                  (proposal.state = "open"
+                                    ? "activetab bg-red"
+                                    : "activetab bg-green")
+                                }
+                              >
+                                {
+                                  (proposal.state = "activetab bg-red"
+                                    ? "closed"
+                                    : "Open")
+                                }
                               </span>
                             </span>
                           </h6>
@@ -515,22 +526,22 @@ const DaoDetail = () => {
                   role="tabpanel"
                   aria-labelledby="Financials-tab"
                 >
-                  <h6 style={{ marginBottom: "10px" }}>
+                  {/* <h6 style={{ marginBottom: "10px" }}>
                     <span>
                       {" "}
                       Implementation of Safesnap for FEI
                       <span className="activetab bg-red">Closed</span>
                     </span>
-                  </h6>
+                  </h6> */}
                   {/* {thisData.mission} */}
-                  <p className="bodytext">
+                  {/* <p className="bodytext">
                     As a relatively new investor in FEI, I am really surprised
                     at the valuation of $Tribe. PCV for the protocol is $408
                     million, yet real circulating mc stands at $113 million.
                     Even fully diluted, the mc is $250 million, still $150
                     million away fro...
                   </p>
-                  <p className="footerText">Read the full proposal</p>
+                  <p className="footerText">Read the full proposal</p> */}
                 </div>
                 <div
                   className="tab-pane fade tabs-content tab-content2"
@@ -576,34 +587,12 @@ const DaoDetail = () => {
                     Even fully diluted, the mc is $250 million, still $150
                     million away fro...
                   </p>
-                  <p className="footerText">Read the full proposal</p>
+                  <p className="footerText">Read full proposal</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
-        <Footer />
-        {/* footer  start*/}
-        {/* <div className="footer">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-6">
-                <h2 className="left-content">
-                  <img
-                    className="blueLogo"
-                    style={{ width: "200px" }}
-                    src={logo}
-                    alt=""
-                  />
-                </h2>
-              </div>
-              <div className="col-md-6">
-                <p className="right-content">© DAO Hunt, 2022</p>
-              </div>
-            </div>
-          </div>
-        </div> */}
-        {/* footer  end*/}
       </div>
     );
   }
