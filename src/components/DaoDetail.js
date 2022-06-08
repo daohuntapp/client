@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { NavLink } from "react-router-dom";
 import { daoData } from "../data/daoData";
 import { utils } from "@snapshot-labs/snapshot.js";
+import { useMoralis, useWeb3ExecuteFunction } from "react-moralis";
+import DAOHuntERC721 from "../abi/contracts/DAOHuntERC721.sol/DAOHuntERC721.json";
 
 import axios from "axios";
 
@@ -151,7 +153,25 @@ const DaoDetail = () => {
   }
 
   function DAODetails() {
-    console.log("this data", thisData);
+    const contractProcessor = useWeb3ExecuteFunction();
+    const { Moralis } = useMoralis();
+
+    async function upvote(val) {
+      //console.log(DAOHuntERC721);
+      let options = {
+        contractAddress: "0xAdb5047623dDe3535fdb91811aaEce731f2574C9",
+        functionName: "upvote",
+        abi: { DAOHuntERC721 },
+        pramas: {
+          _id: "1",
+        },
+        msgValue: Moralis.Units.ETH(val),
+      };
+      await contractProcessor.fetch({
+        params: options,
+      });
+    }
+
     return (
       <div className="main">
         <section className="detailPageSec">
@@ -347,7 +367,11 @@ const DaoDetail = () => {
               <div className="right col-md-4">
                 <div className="upvoteBtn">
                   <div className="sideBtngreen mb-4">
-                    <a aria-current="page" class="btn" href="#">
+                    <a
+                      aria-current="page"
+                      class="btn"
+                      onClick={() => upvote(0.1)}
+                    >
                       Upvote
                     </a>
                   </div>

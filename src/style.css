@@ -260,6 +260,7 @@ nav .submitdaobutton {
   background-image: url("./images/bg1.png");
   background-repeat: no-repeat;
   background-position: top;
+  /* background-size: cover; */
 }
 
 .main section.bannerSection {
@@ -472,6 +473,7 @@ nav .submitdaobutton {
   background-image: url("./images/bg2.png");
   background-repeat: no-repeat;
   background-position: left;
+  background-size: cover;
 }
 
 .main .detailPageSec .bgBanner {

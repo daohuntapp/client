@@ -10,10 +10,9 @@ const Navbar = () => {
     useMoralis();
 
   const [walletAddress, setWalletAddress] = useState(null);
-
   const connectWallet = async () => {
     authenticate({
-      signingMessage: "Welcome to DAOHUNT",
+      signingMessage: "Welcome to DAOHunt",
       chainId: 80001,
     });
     setWalletAddress(user.get("ethAddress"));
@@ -57,7 +56,6 @@ const Navbar = () => {
 
             {/* <input className="form-control me-2" type="search" placeholder="Enter DAO Name" aria-label="Search" /> */}
             <button className="connectBtn" onClick={connectWallet}>
-              {" "}
               {!walletAddress
                 ? "Connect Wallet"
                 : `${walletAddress.slice(0, 4)}...${walletAddress.slice(-4)}`}
